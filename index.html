@@ -125,6 +125,32 @@
         .why-us-card h3 { font-size: 1.3rem; font-weight: 600; color: var(--primary); margin-bottom: 1rem; }
         .why-us-card p { color: var(--gray); font-size: 0.95rem; line-height: 1.7; }
         /* Contact */
+        /* Quality Control Section */
+        .quality { background: var(--white); }
+        .quality-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+        .quality-step { text-align: center; padding: 2rem 1.5rem; background: var(--light); border-radius: 8px; position: relative; }
+        .quality-step-number { width: 40px; height: 40px; background: var(--accent); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem; margin: 0 auto 1rem; }
+        .quality-step h4 { font-size: 1.1rem; color: var(--primary); margin-bottom: 0.5rem; }
+        .quality-step p { font-size: 0.9rem; color: var(--gray); line-height: 1.6; }
+
+        /* Shipping Section */
+        .shipping { background: var(--light); }
+        .shipping-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+        .shipping-image img { width: 100%; border-radius: 8px; box-shadow: var(--shadow); }
+        .shipping-content h3 { font-size: 1.8rem; color: var(--primary); margin-bottom: 1.5rem; }
+        .shipping-features { list-style: none; }
+        .shipping-features li { display: flex; gap: 1rem; padding: 0.8rem 0; border-bottom: 1px solid #e5e5e5; }
+        .shipping-features i { color: var(--accent); font-size: 1.1rem; width: 24px; margin-top: 0.2rem; }
+        .shipping-features span { color: var(--dark-gray); line-height: 1.6; }
+        .shipping-features strong { color: var(--primary); }
+
+        /* FAQ Section */
+        .faq { background: var(--white); }
+        .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .faq-item { background: var(--light); padding: 1.5rem 2rem; border-radius: 8px; border-left: 3px solid var(--accent); }
+        .faq-question { font-size: 1.1rem; font-weight: 600; color: var(--primary); margin-bottom: 0.5rem; }
+        .faq-answer { color: var(--gray); line-height: 1.7; font-size: 0.95rem; }
+
         .contact { background: var(--white); }
         .contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
         .contact-info h3 { font-size: 2rem; color: var(--primary); margin-bottom: 1.5rem; }
@@ -170,6 +196,9 @@
             .hero h1 { font-size: 2.8rem; }
             .featured-grid { grid-template-columns: repeat(2, 1fr); }
             .showcase-grid { grid-template-columns: repeat(2, 1fr); }
+            .quality-grid { grid-template-columns: repeat(2, 1fr); }
+            .shipping-grid { grid-template-columns: 1fr; }
+            .faq-grid { grid-template-columns: 1fr; }
             .why-us-grid { grid-template-columns: repeat(2, 1fr); }
             .footer-grid { grid-template-columns: repeat(2, 1fr); }
         }
@@ -196,11 +225,22 @@
             .hero h1 { font-size: 2rem; }
             .hero-stats { gap: 1.5rem; }
             .stat-number { font-size: 2rem; }
+            .quality-grid { grid-template-columns: 1fr; }
             .why-us-grid { grid-template-columns: 1fr; }
             .showcase-grid { grid-template-columns: 1fr; }
             .contact-form { padding: 2rem 1.5rem; }
         }
     </style>
+    <!-- Google Analytics -->
+    <!-- 替换 G-YPRG2V2DP3 为你实际的 Google Analytics 跟踪 ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YPRG2V2DP3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YPRG2V2DP3');
+    </script>
+    <!-- End Google Analytics -->
 </head>
 <body>
     <!-- Navigation -->
@@ -212,10 +252,13 @@
                 <li><a href="#featured">Collections</a></li>
                 <li><a href="#showcase">Showcase</a></li>
                 <li><a href="#about">About Us</a></li>
+                    <li><a href="#quality">Quality</a></li>
+                    <li><a href="#shipping">Shipping</a></li>
+                    <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="nav-contact">
-                <a href="mailto:roylaigwaiwa@gmail.com"><i class="fas fa-envelope"></i> roylaigwaiwa@gmail.com</a>
+                <a href="mailto:quartzprox@outlook.com"><i class="fas fa-envelope"></i> quartzprox@outlook.com</a>
                 <a href="#contact" class="cta-button">Get Quote</a>
             </div>
             <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
@@ -417,6 +460,103 @@
         </div>
     </section>
     <!-- Contact Section -->
+    <!-- Quality Control Section -->
+    <section class="section quality" id="quality">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Quality Control</div>
+                <h2 class="section-title">Strict Quality Assurance</h2>
+                <p class="section-subtitle">Every slab goes through rigorous inspection before leaving our factory to ensure you receive only the finest quality quartz surfaces</p>
+            </div>
+            <div class="quality-grid">
+                <div class="quality-step">
+                    <div class="quality-step-number">1</div>
+                    <h4>Raw Material Inspection</h4>
+                    <p>All quartz crystals and resins are tested upon arrival to meet our strict quality standards</p>
+                </div>
+                <div class="quality-step">
+                    <div class="quality-step-number">2</div>
+                    <h4>Production Monitoring</h4>
+                    <p>Real-time monitoring throughout the pressing and curing process for consistency</p>
+                </div>
+                <div class="quality-step">
+                    <div class="quality-step-number">3</div>
+                    <h4>Finished Product Testing</h4>
+                    <p>Hardness, stain resistance, and color consistency tests on every batch</p>
+                </div>
+                <div class="quality-step">
+                    <div class="quality-step-number">4</div>
+                    <h4>Final Inspection</h4>
+                    <p>100% visual inspection before packaging, with QC report available upon request</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shipping & Packaging Section -->
+    <section class="section shipping" id="shipping">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Shipping & Packaging</div>
+                <h2 class="section-title">Safe & Reliable Delivery</h2>
+                <p class="section-subtitle">Professional packaging and global shipping to ensure your products arrive in perfect condition</p>
+            </div>
+            <div class="shipping-grid">
+                <div class="shipping-image">
+                    <img src="images/package.jpg" alt="Container Loading - Quartz Stone Export">
+                </div>
+                <div class="shipping-content">
+                    <h3>Export-Ready Packaging</h3>
+                    <ul class="shipping-features">
+                        <li><i class="fas fa-ship"></i><span><strong>Port of Loading:</strong> Guangzhou / Shenzhen, China</span></li>
+                        <li><i class="fas fa-box"></i><span><strong>Packaging:</strong> Wooden crates with foam protection, seaworthy packaging</span></li>
+                        <li><i class="fas fa-pallet"></i><span><strong>Standard Pack:</strong> 7-10 slabs per bundle, A-frame wooden stand</span></li>
+                        <li><i class="fas fa-file-alt"></i><span><strong>Documents:</strong> Full set of shipping documents (B/L, Invoice, Packing List, CO)</span></li>
+                        <li><i class="fas fa-calendar-alt"></i><span><strong>Lead Time:</strong> 10-15 days for slabs, 15-20 days for custom countertops</span></li>
+                        <li><i class="fas fa-globe"></i><span><strong>Trade Terms:</strong> FOB, CIF, EXW, DDP available</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">FAQ</div>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Find answers to common questions about our quartz products and ordering process</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">What is your minimum order quantity (MOQ)?</div>
+                    <div class="faq-answer">For standard quartz slabs, our MOQ is 50 square meters (about 10 slabs). For custom countertops and washbasins, MOQ starts from 10 pieces. Sample orders are also available for quality testing.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How long is the production lead time?</div>
+                    <div class="faq-answer">Standard slab orders are typically shipped within 10-15 days after deposit. Custom countertops and special colors take 15-20 days. We also keep popular colors in stock for immediate delivery.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What payment terms do you accept?</div>
+                    <div class="faq-answer">We accept T/T (30% deposit, 70% balance before shipment), L/C at sight, and Trade Assurance through Alibaba. For sample orders, PayPal and Western Union are also acceptable.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Can I get samples before ordering?</div>
+                    <div class="faq-answer">Yes, we provide free small samples (10x10cm or 15x15cm) for quality and color verification. You only need to cover the express shipping cost. Sample delivery takes 3-5 days via DHL/FedEx.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Do you offer custom sizes and edge profiles?</div>
+                    <div class="faq-answer">Absolutely! We offer custom cutting and various edge profiles including bullnose, bevel, ogee, flat polish, and more. Just send us your drawings or specifications for a custom quote.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What certifications do your products have?</div>
+                    <div class="faq-answer">Our quartz products meet CE, NSF, and ISO 9001 international quality standards. We also provide SGS test reports for hardness, stain resistance, and food safety upon request.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="section contact" id="contact">
         <div class="container">
             <div class="section-header">
@@ -431,7 +571,7 @@
                     <ul class="contact-details">
                         <li><i class="fas fa-map-marker-alt"></i><span>An Tang Street, Yuncheng District, Yunfu City, Guangdong Province, China</span></li>
                         <li><i class="fab fa-whatsapp"></i><span>+86 18507587971 (WhatsApp)</span></li>
-                        <li><i class="fas fa-envelope"></i><span>roylaigwaiwa@gmail.com</span></li>
+                        <li><i class="fas fa-envelope"></i><span>quartzprox@outlook.com</span></li>
                         <li><i class="fas fa-clock"></i><span>Monday - Saturday: 8:00 AM - 6:00 PM (CST)</span></li>
                     </ul>
                     <a href="https://wa.me/8618507587971" class="cta-button" style="display:inline-flex;align-items:center;gap:0.5rem;background:#25D366;color:white !important;">
@@ -492,6 +632,9 @@
                     <h4>Company</h4>
                     <ul class="footer-links">
                         <li><a href="#about">About Us</a></li>
+                    <li><a href="#quality">Quality</a></li>
+                    <li><a href="#shipping">Shipping</a></li>
+                    <li><a href="#faq">FAQ</a></li>
                         <li><a href="#showcase">Project Showcase</a></li>
                         <li><a href="#why-us">Our Advantages</a></li>
                     </ul>
@@ -501,7 +644,7 @@
                     <ul class="footer-links">
                         <li><a href="#contact">Contact Us</a></li>
                         <li><a href="https://wa.me/8618507587971">WhatsApp Us</a></li>
-                        <li><a href="mailto:roylaigwaiwa@gmail.com">Email Us</a></li>
+                        <li><a href="mailto:quartzprox@outlook.com">Email Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -534,31 +677,43 @@
                 }
             });
         });
-        // Form submission via Email
+        // Form submission via Formspree
         const inquiryForm = document.getElementById('inquiryForm');
         inquiryForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            const data = new FormData(this);
-            const name = ((data.get('firstName') || '') + ' ' + (data.get('lastName') || '')).trim();
-            const email = data.get('email') || '';
-            const phone = data.get('phone') || '';
-            const company = data.get('company') || 'N/A';
-            const product = data.get('product') || '';
-            const message = data.get('message') || '';
-            const subject = encodeURIComponent('New Inquiry from ' + name + ' - ' + product);
-            const body = encodeURIComponent(
-                'New Inquiry from Website\n' +
-                '================================\n\n' +
-                'Name: ' + name + '\n' +
-                'Email: ' + email + '\n' +
-                'Phone: ' + phone + '\n' +
-                'Company: ' + company + '\n' +
-                'Product Interest: ' + product + '\n' +
-                '================================\n\n' +
-                'Message:\n' + message
-            );
-            window.location.href = 'mailto:roylaigwaiwa@gmail.com?subject=' + subject + '&body=' + body;
-            alert('Thank you for your inquiry! Your email client will open shortly. Please send the email to complete your inquiry. We will respond within 24 hours.');
+            const submitBtn = inquiryForm.querySelector('.submit-btn');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+
+            const formData = new FormData(this);
+            // 替换下面的 mjyggly 为你实际的 Formspree 表单ID
+            fetch('https://formspree.io/f/mjyggly', {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    submitBtn.innerHTML = '<i class="fas fa-check"></i> Sent Successfully!';
+                    submitBtn.style.background = '#28a745';
+                    inquiryForm.reset();
+                    setTimeout(() => {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.style.background = '';
+                        submitBtn.disabled = false;
+                    }, 3000);
+                } else {
+                    throw new Error('Submit failed');
+                }
+            }).catch(error => {
+                submitBtn.innerHTML = '<i class="fas fa-times"></i> Failed, Please Try Again';
+                submitBtn.style.background = '#dc3545';
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.style.background = '';
+                    submitBtn.disabled = false;
+                }, 3000);
+            });
         });
         // Scroll animation
         const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
